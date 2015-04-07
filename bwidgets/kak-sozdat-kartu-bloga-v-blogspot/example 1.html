@@ -1,0 +1,97 @@
+﻿<script type='text/javascript'>
+/* Настройки скрипта */
+var itoc_siteUrl = "http://izhurnal.blogspot.com/" 
+var itoc_categories = [
+ ['Blogger.com'        , ''                   , 'Cкрипты, виджеты, идеи и советы для всех, кто держит блог на платформе Blogger.com'],
+ ['блогеру на заметку' , 'Блогеру на заметку' , 'Полезности для блогеров, вне зависимости от используемой платформы.'],
+ ['утилиты онлайн'     , 'Утилиты онлайн'     , 'Полезные скрипты, выполняющиеся прямо в браузере.'],
+ ['советы по настройке', 'Советы по настройке', 'Рецепты и рекомендации по настройке программ.'],
+ ['это интересно'      , 'Это интересно'      , 'Заметки обо всём на свете.'],
+ ['мысль вслух'        , 'Мысль вслух'        , 'Случайные мысли на произвольные темы.'],
+ ['разное'             , 'Разное'             , 'Сообщения, не вписавшиеся в формат других разделов.'],
+ ['PR'                 , 'Разное'             , ''],
+ ['поле чудес; страна дураков', 'Разное'      , '']
+];
+
+var itoc_descriptions = {
+ 'http://izhurnal.blogspot.com/2010/10/calendar-archive-widget-blogger.html' : 
+  'Виджет «Календарь-архив» показывает в вашем блоге календарь на текущий месяц, в котором по дням проставлены ссылки на ваши статьи. Вам и вашим посетителям будет наглядно видно, когда и что вы писали. Календарь можно листать по месяцам и по годам, просматривая весь архив.',
+ 'http://izhurnal.blogspot.com/2010/11/css-typetextcss-table-background-color.html' :
+  'Примеры оформления <a href="http://izhurnal.blogspot.com/2010/10/calendar-archive-widget-blogger.html">виджета Календарь</a> '+
+  'при помощи таблиц стилей.',
+ 'http://izhurnal.blogspot.com/2010/09/blog-post_10.html' :
+  'Как изменить подпись «Анонимный» в комментариях блога на «Гость» или любую другую. Небольшой скрипт-хак для Blogger.com.',
+ 'http://izhurnal.blogspot.com/2010/10/blog-post_11.html' :
+  'Как изменить текст и внешний вид ссылок навигации, что расположены в конце каждой страницы блога.',
+ 'http://izhurnal.blogspot.com/2010/10/disqus.html' :
+  'Идея о том, как заставить поисковые системы индексировать текст комментариев, оставленных на блоге при помощи системы Disqus.',
+ 'http://izhurnal.blogspot.com/2010/09/today-yesterday-date-blogger.html' :
+  'Сегодня мы научим блог писать вместо даты слова «вчера» и «сегодня» для сообщений, которые были опубликованы вчера и сегодня. :)',
+ 'http://izhurnal.blogspot.com/2010/09/blogspot_08.html' :
+  '«1 комментарий», «2 комментария», «25 комментариев»... Хотите, чтобы ваш блог показывал число комментариев в полном соответствии с правилами русского языка? На самом деле, сделать это очень просто...',
+ 'http://izhurnal.blogspot.com/2010/09/blogspot-hidden-posts.html' :
+  'Небольшой хак для шаблона блога: делаем так, чтобы сообщения без ярлыков не было видно на главной, в архиве и т.п.',
+ 'http://izhurnal.blogspot.com/2010/09/blogger.html' :
+  'Оптимизация шаблона блога с целью сделать ваш блог более дружественным для поисковых систем.',
+ 'http://izhurnal.blogspot.com/2010/09/blogspot.html' :
+  'Описание синтаксиса, используемого в шаблонах блога. В первой части рассматриваются базовые элементы: теги секций и виджетов.',
+ 'http://izhurnal.blogspot.com/2010/09/widget-tags-blogspot.html' :
+  'Синтаксис шаблонов блога, часть вторая. Теги для формирования внутренностей виджетов: условия, циклы, подключаемые сегменты и так далее.',
+ 'http://izhurnal.blogspot.com/2010/09/blogspot_04.html' :
+  'Синтаксис шаблонов блога, часть третья. Теги для подстановки в шаблон реальных данных, таких как название блога, содержимое сообщений, ярлыки и т.п.',
+ 'http://izhurnal.blogspot.com/2010/10/blog-post_26.html' :
+  'Мой вариант скрипта для списка похожих статей. Как и большинство подобных скриптов, определяет похожие сообщения на основе совпадения ярлыков. Расширенные возможности настройки: фильтрация, переименование и объединение ярлыков.',
+ 'http://izhurnal.blogspot.com/2010/08/mp.html' :
+  '',
+ 'http://izhurnal.blogspot.com/2010/09/blog-post_05.html' :
+  '',
+ 'http://izhurnal.blogspot.com/2010/09/seo-intelligence.html' :
+  '',
+ 'http://izhurnal.blogspot.com/2010/09/blog-post_7110.html' :
+  '',
+ 'http://izhurnal.blogspot.com/2010/09/blog-post_9547.html' :
+  '',
+ 'http://izhurnal.blogspot.com/2010/10/blog-post_10.html' :
+  ''
+};
+
+var itoc_images = {
+ 'http://izhurnal.blogspot.com/2010/10/firefox-cache.html' :
+  'http://3.bp.blogspot.com/_9LzkYxYJB94/TLAXCacumTI/AAAAAAAAAIQ/9hR0lBxOYJE/s200/mozilla-firefox-logo.jpg',
+ 'http://izhurnal.blogspot.com/2010/10/feedburner.html' :
+  ''
+};
+
+var itoc_showDate = true;
+var itoc_showDesc = true;
+var itoc_showImg  = false;
+var itoc_showImgOnlyWithDesc  = true;
+
+var itoc_maxDescLength = 500;
+var itoc_minContentLength = 700;
+var itoc_minDescLength = 30;
+
+var itoc_sortBy = 'published';
+var itoc_sortOrderAscending = true;
+</script>
+
+<script type='text/javascript' src='https://cdn.rawgit.com/dokxpi/JSCSSURI/master/bwidgets/kak-sozdat-kartu-bloga-v-blogspot/itoc.jss'></script>
+<noscript>Для отображения содержимого страницы необходима поддержка JavaScript.</noscript>
+
+<style type='text/css'>
+.itoc p{margin-top:0;}
+.itoc h4{margin-bottom:0;clear:left;}
+.itoc li{list-style-type:none;clear:left;}
+.itoc .date{font-size:small;color:green;font-family:terminus, monospace;}
+.itoc a{font-size:140%;color:#8bc;}
+.itoc .date:before{content:"[";}
+.itoc .date:after{content:"]";}
+.itoc .desc{margin-left:20px;padding-left:20px;border-left:1px solid green;}
+.itoc .endofdesc{clear:left;}
+.itoc img{float:left;padding-left:41px;padding-right:5px;width:130px;}
+.itoc .progressbartable{margin-left:auto;margin-right:auto;}
+.itoc .progressbartable td{width:10px;height:5px;}
+.itoc .progressbartable .ready{background-color:#cdf;}
+.itoc .progressbartable .notready{background-color:#ccc;}
+.itoc .progressbartable .progressbartext{color:#cdf;font-family:terminus, monospace;font-size:small;text-align:center;}
+</style>
